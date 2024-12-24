@@ -1,0 +1,61 @@
+     /* Default styles for form */
+     .contact-form {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    footer {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+    }
+
+    .btn-white {
+        background-color: white;
+        color: black;
+    }
+
+    .text-white a {
+        color: white !important;
+    }
+
+    /* Dark Mode Styles */
+    .dark-mode {
+        background-color: #121212;
+        color: white;
+    }
+
+    .dark-mode .navbar {
+        background-color: #333;
+    }
+
+    .dark-mode .contact-form {
+        background-color: rgba(40, 40, 40, 0.8);
+        color: white;
+    }
+
+    .dark-mode .form-label {
+        color: #ddd;
+    }
+
+    .dark-mode .form-control {
+        background-color: #555;
+        color: white;
+        border-color: #666;
+    }
+
+    .dark-mode .btn-primary {
+        background-color: #007bff;
+        color: white;
+        border-color: #0056b3;
+    }
+
+    .dark-mode .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+
+    .dark-mode footer {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
