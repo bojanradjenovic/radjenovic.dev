@@ -1,0 +1,41 @@
+body {
+    background-image: url('https://github.com/vinceliuice/WhiteSur-wallpapers/blob/main/1080p/Monterey-light.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    color: #212529;
+  }
+  body.dark-mode {
+    background-image: url('https://github.com/vinceliuice/WhiteSur-wallpapers/blob/main/1080p/Monterey-dark.jpg?raw=true');
+    color: #f8f9fa !important;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .card {
+    background-color: rgba(33, 37, 41, 0.8);
+    color: white;
+}
+
+.navbar-light {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark-mode .navbar-light {
+    background-color: rgba(33, 37, 41, 0.8) !important;
+}
+
+.nav-link {
+    color: #212529 !important;
+}
+
+body.dark-mode .nav-link{
+    color: #f8f9fa !important;
+}
+body.dark-mode .navbar-brand{
+    color: #f8f9fa !important;
+}
+body.dark-mode .navbar-toggler-icon {
+background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255,255,255,1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
