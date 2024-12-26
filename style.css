@@ -1,12 +1,12 @@
 body {
-    background-image: url('https://github.com/vinceliuice/WhiteSur-wallpapers/blob/main/1080p/Monterey-light.jpg?raw=true');
+    background-image: url('img/Monterey-light.jpg');
     background-size: cover;
     background-position: center;
     color: #212529;
 }
 
 body.dark-mode {
-    background-image: url('https://github.com/vinceliuice/WhiteSur-wallpapers/blob/main/1080p/Monterey-dark.jpg?raw=true');
+    background-image: url(img/Monterey-dark.jpg);
     color: #f8f9fa !important;
 }
 
