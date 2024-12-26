@@ -1,0 +1,6 @@
+{
+    "email": "example@domain.tld",
+    "domain": "domain.tld",
+    "port": 12345,
+    "redis_url": "redis://localhost:12345"
+}

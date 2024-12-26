@@ -37,7 +37,13 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="contact-form">
-                        <form action="/submit_form" method="post">
+                        <div id="success-message" class="alert alert-success" style="display: none;">
+                            Poruka je uspešno poslata!
+                        </div>
+                        <div id="error-message" class="alert alert-danger" style="display: none;">
+                            Došlo je do greške.
+                        </div>
+                        <form id="contact-form" method="post">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Vaše ime</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
@@ -51,7 +57,7 @@
                                 <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary w-100">Pošalji poruku</button>
+                                <button type="submit" class="btn btn-primary w-100">Pošaljite poruku</button>
                             </div>
                         </form>
                     </div>
@@ -69,7 +75,8 @@
                 <a href="https://t.me/bojanradjenovic" target="_blank" class="me-3"><i class="fab fa-telegram"></i></a>
             </div>
         </footer>
-    <script src="../contact/script.js"></script>
-    <script src="english.js"></script>
+
+        <script src="../contact/script.js"></script>
+        <script src="english.js"></script>
     </body>
 </html>

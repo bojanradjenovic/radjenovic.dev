@@ -27,3 +27,33 @@ toggleButton.addEventListener('click', () => {
         contacttext.classList.add('text-dark');
     }
 });
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+
+    // Hide previous messages
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+    
+    fetch('https://siteapi.boki.hackclub.app/contact',{
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.success){
+            successMessage.style.display = 'block';
+            document.getElementById('contact-form').reset();
+        } else{
+            errorMessage.style.display = 'block';
+            errorMessage.textContent = 'An error occurred: ' + data.message;}
+    })
+    .catch((error) => {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'An error occurred. Please try again later';
+ });
+    
+});
