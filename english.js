@@ -1,4 +1,9 @@
 const toggleEnglishButton = document.getElementById('toggleEnglish');
+const pages = {
+    '/projekti/': '/projects/',
+    '/kontakt/': '/contact/',
+    '/sr/': '/'
+}
 async function redirectByLocation() {
     try {
       const response = await fetch('https://ipwhois.app/json/');
@@ -6,7 +11,7 @@ async function redirectByLocation() {
       const country = data.country_code; 
       const redirectCountries = ['RS', 'ME', 'HR', 'BA']; 
       if (!redirectCountries.includes(country)) {
-        window.location.href = "/";
+        window.location.pathname = pages[window.location.pathname];
         localStorage.setItem('language', 'english');
       } else {
         localStorage.setItem('language', 'serbian');
@@ -20,10 +25,10 @@ if(!localStorage.getItem('language')){
 }
 
 if(localStorage.getItem('language') === 'english'){
-    window.location.href = '/';
+    window.location.pathname = pages[window.location.pathname];
 }
 
 toggleEnglishButton.addEventListener('click', () => {
     localStorage.setItem('language', 'english');
-    window.location.href = '/';
+    window.location.pathname = pages[window.location.pathname];
 });

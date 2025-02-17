@@ -1,4 +1,9 @@
 const toggleSerbianButton = document.getElementById('toggleSerbian');
+const pages = {
+    '/projects/': '/projekti/',
+    '/contact/': '/kontakt/',
+    '/': '/sr'
+}
 async function redirectByLocation() {
     try {
       const response = await fetch('https://ipwhois.app/json/');
@@ -6,7 +11,7 @@ async function redirectByLocation() {
       const country = data.country_code; 
       const redirectCountries = ['RS', 'ME', 'HR', 'BA']; 
       if (redirectCountries.includes(country)) {
-        window.location.href = "/sr";
+        window.location.pathname = pages[window.location.pathname];
         localStorage.setItem('language', 'serbian');
       } else {
         localStorage.setItem('language', 'english');
@@ -20,10 +25,10 @@ if(!localStorage.getItem('language')){
 }
 
 if(localStorage.getItem('language') === 'serbian'){
-    window.location.href = '/sr';
+    window.location.pathname = pages[window.location.pathname];
 }
 
 toggleSerbianButton.addEventListener('click', () => {
     localStorage.setItem('language', 'serbian');
-    window.location.href = '/sr';
+    window.location.pathname = pages[window.location.pathname];
 });
